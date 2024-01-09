@@ -1,0 +1,111 @@
+ 
+  
+  body {
+    font-family: 'Donegal One';font-size: 22px;
+    background-color: #FFE6A7; 
+  }
+  
+  /* Style the header */
+  .header {
+    grid-area: header;
+    background-color: #99582A;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    align-content: center;
+  }
+   
+  .nav {
+    grid-area: nav;
+    background-color:#432818;
+    padding: 5px;
+    font-size: 16px;
+    color:#f1f1f1;
+    border-left: 20px;
+  }
+  a:link {
+    color: #FFE6A7;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: #99582A;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #BB9457;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  /*img {
+    float: left;
+    margin-right: .5em;
+  }*/
+
+  
+  /* The grid container */
+  .grid-container {
+    display: grid;
+    grid-template-areas: 
+      'header header header header header header'
+      'nav nav nav nav nav nav'
+      ' left left left left right right' 
+      'footer footer footer footer footer footer';
+      text-align: center;
+
+    /* grid-column-gap: 10px; - if you want gap between the columns */
+  } 
+  
+  .left,
+  .middle,
+  .right {
+    padding: 10px;
+  } 
+  
+  /* Style the left column */
+  .left {
+    grid-area: left;
+   
+  }
+  
+  /* Style the middle column */
+  .middle {
+    grid-area: middle;
+   
+  }
+  
+  /* Style the right column */
+  .right {
+    grid-area: right;
+  }
+  
+  /* Style the footer */
+  .footer {
+    grid-area: footer;
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+    background-color: #432818;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media (max-width: 600px) {
+    .grid-container  {
+      grid-template-areas: 
+        'header header header header header header' 
+        'nav nav nav nav nav nav'
+        'left left left left left left' 
+        'right right right right right right' 
+        'footer footer footer footer footer footer';
+    }
+  } 
+  
